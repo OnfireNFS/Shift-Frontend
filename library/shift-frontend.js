@@ -12,11 +12,36 @@ $(document).ready(function () {
         
       }
       
-      else if($(theme).attr("background-type") === "picture") {
+      else if($(theme).attr("background-type") === "image") {
+        
+        $("body").css("background-image", "url(\"" + $(theme).attr("background-image") + "\")");
+        
+        if ($(theme).attr("background-style") === "fit") {
+          
+          $("body").css("background-size", "cover");
+          $("body").css("background-repeat", "no-repeat");
+          
+        }
+        
+        else {
+          
+          
+          
+        }
+        
+      }
+      
+      else if($(theme).attr("background-type") === "canvas") {
         
         
         
       }
+      
+      else {
+        
+      }
+      
+      
       
       $("#blackout").fadeOut(1000);
       
