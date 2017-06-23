@@ -6,10 +6,22 @@ $(document).ready(function () {
     $.post('theme/' + $(config).attr("theme")).done(function (data) {
       var theme = jsyaml.load(data);
       
-      $("body").css("background-color", $(theme).attr("background-color"));
-    
+      if($(theme).attr("background-type") === "color") {
+        
+        $("body").css("background-color", $(theme).attr("background-color"));
+        
+      }
+      
+      else if($(theme).attr("background-type") === "picture") {
+        
+        
+        
+      }
+      
       $("#blackout").fadeOut(1000);
-    
+      
+      
+      
     });
   });
 });
