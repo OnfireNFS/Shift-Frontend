@@ -1,1 +1,9 @@
 theme: "dark.yml"
+
+consoles:
+  - machine:
+      name: "Nintendo 64"
+      core: "test.dll"
+  - machine:
+      name: "Nintendo Wii"
+      core: "test2.dll"
