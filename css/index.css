@@ -1,0 +1,20 @@
+.background {
+  background: #000000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.fadeIn {
+  animation: aFadeIn 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aFadeIn
+{
+  0%    { opacity: 0;   }
+  100%  { opacity: 1;   }
+}
