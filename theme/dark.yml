@@ -1,3 +1,6 @@
+# Font #
+main-font: "Open_Sans/OpenSans-SemiBold.ttf"
+
 # Background #
 background-type: "color"
 

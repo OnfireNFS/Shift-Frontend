@@ -27,6 +27,10 @@ $().ready(function() {
       .done(function (data) {
         theme = jsyaml.load(data);
 
+        //Load fonts
+        alert($(theme).attr("main-font"));
+        $("head").prepend("<style type='text/css'> @font-face {font-family: 'Main'; src: url('resources/fonts/" + $(theme).attr("main-font") + "');}</style>");
+        
         $(".background").css("background-color", $(theme).attr("background-color"));
         $(".blackout").addClass("fadeOut");
       })

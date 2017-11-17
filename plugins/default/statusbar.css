@@ -2,6 +2,11 @@
   
 }
 
+.statusbar #clock {
+  display: inline;
+  font-family: "Main";
+}
+
 .statusbar {
   position: fixed;
   top: 0;

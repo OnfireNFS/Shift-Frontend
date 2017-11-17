@@ -16,7 +16,7 @@ $().ready(function() {
   
   if(statusbarConfig.showConnection) {
     if(navigator.onLine) {
-      $(".statusbar").html("<i id='internet' class='" + $(statusbarConfig).attr("connectionIcon") + "'></i><p id='clock'>XX:XX</p>" + $(".statusbar").html());
+      $(".statusbar").html("<i id='internet' class='" + $(statusbarConfig).attr("connectionIcon") + "'></i><div id='clock'>XX:XX</p=div>" + $(".statusbar").html());
     }
   }
   
@@ -40,8 +40,8 @@ function statusbarClock() {
   
   if(!$(statusbarConfig).attr("24hourTime")) {
     ampm = date.getHours() < 12
-             ? ' AM'
-             : ' PM';
+             ? 'AM'
+             : 'PM';
     
     hours = date.getHours() == 0
               ? 12
