@@ -16,11 +16,9 @@ $().ready(function() {
   
   if(statusbarConfig.showConnection) {
     if(navigator.onLine) {
-      $(".statusbar").html("Online! " + $(".statusbar").html());
-    }
-
-    else {
-      $(".statusbar").html("Offline! " + $(".statusbar").html());
+      $(".statusbar").html("<i id='internet' class='icon ion-ios-world-outline'></i>" + $(".statusbar").html());
     }
   }
+  
+  
 });
