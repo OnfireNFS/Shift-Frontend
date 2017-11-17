@@ -34,4 +34,6 @@ buttons:
 
 statusbar:
   showConnection: true
+  connectionIcon: "icon ion-ios-world-outline"
   showTime: true
+  24hourTime: false

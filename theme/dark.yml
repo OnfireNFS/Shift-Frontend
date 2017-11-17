@@ -4,6 +4,8 @@ background-type: "color"
 # Colors #
 accent-color: "#505050"
 background-color: "#272627"
-statusbar-font-color: "#F0F0F0"
 
-# Font #
+
+#### Plugin Settings ####
+statusbar-font-color: "#F0F0F0"
+statusbar-font-deactivated: "#707070"
