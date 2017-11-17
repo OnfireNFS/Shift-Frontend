@@ -1,9 +1,37 @@
 theme: "dark.yml"
 
+plugins:
+  - plugin:
+      name: "Logos"
+      description: "Displays the logo of each console"
+      file: "default/logo.js"
+  - plugin:
+      name: "Statusbar"
+      description: "Displays the statusbar at the top right of the screen"
+      file: "default/statusbar.js"
+
 consoles:
   - machine:
       name: "Nintendo 64"
       core: "test.dll"
+      logo: "resources/logo/n64.png"
   - machine:
       name: "Nintendo Wii"
       core: "test2.dll"
+      
+      
+  
+# Buttons can be typed as lowercase, uppercase or a keycode
+
+buttons:
+  button1: "W" 
+  button2: "a"
+  button3: "S"
+  button4: "d"
+  
+
+#### Plugin Settings ####
+
+statusbar:
+  showConnection: true
+  showTime: true

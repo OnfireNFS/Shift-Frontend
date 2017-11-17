@@ -1,35 +1,53 @@
+let config;
+let theme;
 let consoles = [];
+let plugins = [];
+let buttons = [];
 
 $().ready(function() {
   $.post('config/config.yml')
     .done(function (data) {
     
-      var config = jsyaml.load(data);
-      
+      //Load Config
+      config = jsyaml.load(data);
+    
+      //Load buttons and convert them to keycodes
+      $.each($(config).attr("buttons"), function(key, value) {
+        if(isNaN(value)){
+            buttons[key] = value.toUpperCase().charCodeAt(0);
+        }
+        
+        else {
+          buttons[key] = value;
+        }
+      });
+    
+      //Load theme
+      $.post('theme/' + $(config).attr("theme"))
+      .done(function (data) {
+        theme = jsyaml.load(data);
+
+        $(".background").css("background-color", $(theme).attr("background-color"));
+        $(".blackout").addClass("fadeOut");
+      })
+
+      .fail(function () {
+        alert("Could not load " + $(config).attr("theme"))
+      });
+    
+      //Load plugins
+      $.each($(config).attr("plugins"), function(key, value) {
+        plugins[key] = value.plugin;
+        $.getScript("plugins/" + plugins[key].file);
+      });
+    
+    
+      //Load consoles
       $.each($(config).attr("consoles"), function(key, value)
       {
         consoles[key] = value.machine;
         //Check if file exists here
       });
-    
-    
-    //This prints out what the first console is and number of consoles registered in the system
-    
-      console.log(consoles[0]);
-      console.log(consoles.length);
-    
-      $.post('theme/' + $(config).attr("theme"))
-        
-        .done(function (data) {
-          var theme = jsyaml.load(data);
-
-          $(".background").css("background-color", $(theme).attr("background-color"));
-          $(".background").addClass("fadeIn");
-        })
-      
-        .fail(function () {
-          alert("Could not load " + $(config).attr("theme"))
-        });
     })
   
     .fail(function () {
