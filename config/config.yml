@@ -34,6 +34,7 @@ buttons:
 
 statusbar:
   showConnection: true
-  connectionIcon: "icon ion-ios-world-outline"
+  #connectionIcon: "icon ion-ios-world-outline"
+  connectionIcon: "fa fa-wifi"
   showTime: true
   24hourTime: false

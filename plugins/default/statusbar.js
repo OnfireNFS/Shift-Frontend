@@ -16,8 +16,13 @@ $().ready(function() {
   
   if(statusbarConfig.showConnection) {
     if(navigator.onLine) {
-      $(".statusbar").html("<i id='internet' class='" + $(statusbarConfig).attr("connectionIcon") + "'></i><div id='clock'>XX:XX</p=div>" + $(".statusbar").html());
+      $(".statusbar").html("<i id='internet' class='" + $(statusbarConfig).attr("connectionIcon") + "'></i>" + $(".statusbar").html());
     }
+  }
+  
+  if(statusbarConfig.showTime) {
+     $(".statusbar").html($(".statusbar").html() + "<div id='clock'>XX:XX</p=div>");
+    
   }
   
   statusbarClock();

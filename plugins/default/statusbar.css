@@ -1,10 +1,11 @@
 .statusbar #internet {
-  
+  line-height: 0;
 }
 
 .statusbar #clock {
   display: inline;
   font-family: "Main";
+  padding-left: 20px;
 }
 
 .statusbar {
