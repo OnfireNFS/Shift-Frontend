@@ -28,8 +28,12 @@ buttons:
   button2: 37
   button3: 40
   button4: 39
-  
 
+buttonNames:
+  button1: "Up"
+  button2: "Left"
+  button3: "Down"
+  button4: "Right"
 #### Plugin Settings ####
 
 statusbar:

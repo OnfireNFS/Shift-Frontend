@@ -5,7 +5,8 @@ main-font: "Open_Sans/OpenSans-SemiBold.ttf"
 background-type: "color"
 
 # Colors #
-accent-color: "#505050"
+accent-color: "#ff751a"
+foreground-color: "#505050"
 background-color: "#272627"
 
 
