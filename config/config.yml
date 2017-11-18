@@ -24,17 +24,16 @@ consoles:
 # Buttons can be typed as lowercase, uppercase or a keycode
 
 buttons:
-  button1: "W" 
-  button2: "a"
-  button3: "S"
-  button4: "d"
+  button1: 38 
+  button2: 37
+  button3: 40
+  button4: 39
   
 
 #### Plugin Settings ####
 
 statusbar:
   showConnection: true
-  #connectionIcon: "icon ion-ios-world-outline"
-  connectionIcon: "fa fa-wifi"
   showTime: true
+  connectionIcon: "fa fa-wifi"
   24hourTime: false

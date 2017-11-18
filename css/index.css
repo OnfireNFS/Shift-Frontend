@@ -1,3 +1,7 @@
+* {
+  cursor: none;
+}
+
 .background {
   background: #000000;
   position: absolute;
