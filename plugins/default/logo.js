@@ -13,7 +13,7 @@ $().ready(function() {
   
   
   var logo = consoles[0].logo;
-  $(".content").html($(".content").html() + "<img id='logo' style='width: 20%; margin: 20px; margin-top: 50px;'src='" + logo +"'>");
+  $(".content").html($(".content").html() + "<img class='logo' src='" + logo +"'>");
   
   $(window).keyup(function (key) {
    keyPressed(key);
@@ -22,10 +22,10 @@ $().ready(function() {
 
 function keyPressed(key) {
   if(key.which == buttons.button1) {
-    $("#logo").removeClass("logoSlideDown").addClass("logoSlideUp");
+    $(".logo").removeClass("logoSlideDown").addClass("logoSlideUp");
   }
   
   else if(key.which == buttons.button3) {
-    $("#logo").removeClass("logoSlideUp").addClass("logoSlideDown");
+    $(".logo").removeClass("logoSlideUp").addClass("logoSlideDown");
   }
 };

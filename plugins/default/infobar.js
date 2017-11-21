@@ -10,5 +10,8 @@ $().ready(function() {
   $('head').append("<link rel='stylesheet' type='text/css' href='plugins/" + plugins[infobarPluginID].file.replace(/\.[^/.]+$/, "") + ".css' />");
   $(".content").html($(".content").html() + "<div class='infobar'></div>");
   $(".infobar").html($(".infobar").html() + "<div class='infobarLine'></div>");
-  $(".infobar").html($(".infobar").html() + "<div class='infobarButton'>X</div><div class='infobarText'> Start</div>");
+  
+  $.each($(config).attr("infobar"), function(key, value) {
+    $(".infobar").html($(".infobar").html() + "<div class='infobarButton'>" + value.button.icon + "</div><div class='infobarText'>" + value.button.text + "</div>");
+  });
 });

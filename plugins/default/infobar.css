@@ -22,7 +22,7 @@
 .infobarText {
   margin-top: 20px;
   margin-left: 10px;
-  margin-right: 20px;
+  margin-right: 30px;
   display: inline-block;
   color: #f0f0f0;
   font-family: "Main";
@@ -32,6 +32,7 @@
 .infobarButton {
   display: inline-block;
   margin-top: 0px;
+  margin-left: 20px;
   border-radius: 50%;
   width: 26px;
   height: 26px;

@@ -15,12 +15,12 @@ plugins:
       file: "default/infobar.js"
 consoles:
   - machine:
-      name: "Nintendo 64"
+      name: "Unnamed"
       core: "test.dll"
-      logo: "resources/logo/n64.png"
+      logo: "resources/logo/wii.png"
   - machine:
-      name: "Nintendo Wii"
-      core: "test2.dll"
+      name: "Unnamed"
+      core: "test.dll"
       
       
   
@@ -45,5 +45,10 @@ statusbar:
   connectionIcon: "fa fa-wifi"
   24hourTime: false
   
-search:
-  searchIcon: "icon ion-ios-search-strong"
+infobar:
+  - button:
+      icon: "A"
+      text: "Start"
+  - button:
+      icon: "Y"
+      text: "Search"
