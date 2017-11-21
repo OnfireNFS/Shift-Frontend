@@ -12,16 +12,22 @@ $().ready(function() {
   
   $('head').append("<link rel='stylesheet' type='text/css' href='plugins/" + plugins[statusbarPluginID].file.replace(/\.[^/.]+$/, "") + ".css' />");
   $(".content").html($(".content").html() + "<div class='statusbar'></div>");
-  $(".statusbar").css("color", $(theme).attr("statusbar-font-color"));
+  $(".statusbar").css("color", $(theme).attr("light-color"));
   
   if(statusbarConfig.showConnection) {
     if(navigator.onLine) {
       $(".statusbar").html("<i id='internet' class='" + $(statusbarConfig).attr("connectionIcon") + "'></i>" + $(".statusbar").html());
+      $(".statusbar #internet").css("color", $(theme).attr("light-color"));
+    }
+    
+    else {
+      $(".statusbar").html("<i id='internet' class='" + $(statusbarConfig).attr("connectionIcon") + "'></i>" + $(".statusbar").html());
+      $(".statusbar #internet").css("color", $(theme).attr("deactivated-color"));
     }
   }
   
   if(statusbarConfig.showTime) {
-     $(".statusbar").html($(".statusbar").html() + "<div id='clock'>XX:XX</p=div>");
+     $(".statusbar").html($(".statusbar").html() + "<div id='clock'>XX:XX</div>");
     
   }
   
@@ -29,11 +35,11 @@ $().ready(function() {
   window.setInterval(statusbarClock, 1000);
   
   window.addEventListener("offline", function(){
-    $(".statusbar #internet").css("color", $(theme).attr("statusbar-font-deactivated"));
+    $(".statusbar #internet").css("color", $(theme).attr("deactivated-color"));
   });
   
   window.addEventListener("online", function(){
-    $(".statusbar #internet").css("color", $(theme).attr("statusbar-font-color"));
+    $(".statusbar #internet").css("color", $(theme).attr("light-color"));
   });
 });
 

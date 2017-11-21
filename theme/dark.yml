@@ -5,11 +5,8 @@ main-font: "Open_Sans/OpenSans-SemiBold.ttf"
 background-type: "color"
 
 # Colors #
+light-color: "#F0F0F0"
+deactivated-color: "#707070"
 accent-color: "#ff751a"
 foreground-color: "#505050"
 background-color: "#272627"
-
-
-#### Plugin Settings ####
-statusbar-font-color: "#F0F0F0"
-statusbar-font-deactivated: "#707070"

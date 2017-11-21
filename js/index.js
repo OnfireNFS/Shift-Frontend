@@ -63,6 +63,8 @@ function loadTheme() {
 
     $(".background").css("background-color", $(theme).attr("background-color"));
     $(".blackout").addClass("fadeOut");
+    setTimeout(function(){ $(".blackout").hide(); }, 1000);
+    
   })
 
   .fail(function () {

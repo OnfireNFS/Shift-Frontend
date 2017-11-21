@@ -1,0 +1,46 @@
+.infobar {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 20px;
+  padding-top: 0px;
+  text-align: right;
+}
+
+.infobarLine {
+  position: static;
+  top: -20;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 2px;
+  background-color: white;
+}
+
+.infobarText {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: inline-block;
+  color: #f0f0f0;
+  font-family: "Main";
+  font-size: 18pt;
+}
+
+.infobarButton {
+  display: inline-block;
+  margin-top: 0px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  padding: 2px;
+  background: #272627;
+  border: 2px solid #f0f0f0;
+  color: #f0f0f0;
+  text-align: center;
+  font-family: 'Main';
+  font-size: 14pt;
+  line-height: 26px;
+}

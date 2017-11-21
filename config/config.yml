@@ -9,7 +9,10 @@ plugins:
       name: "Statusbar"
       description: "Displays the statusbar at the top right of the screen"
       file: "default/statusbar.js"
-
+  - plugin:
+      name: "Infobar"
+      description: "Displays information about buttons and provides a search bar at the bottom of the screen"
+      file: "default/infobar.js"
 consoles:
   - machine:
       name: "Nintendo 64"
@@ -24,7 +27,7 @@ consoles:
 # Buttons can be typed as lowercase, uppercase or a keycode
 
 buttons:
-  button1: 38 
+  button1: 38
   button2: 37
   button3: 40
   button4: 39
@@ -41,3 +44,6 @@ statusbar:
   showTime: true
   connectionIcon: "fa fa-wifi"
   24hourTime: false
+  
+search:
+  searchIcon: "icon ion-ios-search-strong"
